@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-gradient-to-b from-amber-50 to-white">
-        <div className="mx-auto max-w-6xl px-6 pt-20 pb-10 text-center sm:pt-28 sm:pb-12">
+        <div className="mx-auto w-full max-w-6xl px-6 pt-14 pb-4 text-center sm:pt-28 sm:pb-12">
           <p className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1 text-sm font-medium text-amber-800">
             {pets.length} animals currently looking for homes
           </p>
@@ -40,8 +40,9 @@ export default function HomePage() {
               Meet the Cats
             </Link>
           </div>
-          <CatPawTrail scale={3} color="text-amber-300" className="mt-10 items-end justify-center" />
+          <CatPawTrail scale={3} color="text-amber-300" className="mt-6 items-end justify-center sm:mt-10" />
         </div>
+
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pt-10 pb-16">
