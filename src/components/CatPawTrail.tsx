@@ -6,14 +6,26 @@ const paws = [
   { delay: "0s", size: 11, rotate: -6, offsetY: 2 },
 ];
 
-export default function CatPawTrail() {
+export default function CatPawTrail({
+  scale = 1,
+  color = "text-slate-300",
+  className = "",
+}: {
+  scale?: number;
+  color?: string;
+  className?: string;
+}) {
   return (
-    <div className="hidden items-center gap-1.5 sm:flex" aria-hidden="true">
+    <div
+      className={`flex ${color} ${className}`}
+      style={{ gap: `${6 * scale}px` }}
+      aria-hidden="true"
+    >
       {paws.map((paw, i) => (
         <span
           key={i}
-          className="inline-block text-slate-300"
-          style={{ transform: `translateY(${paw.offsetY}px) rotate(${paw.rotate}deg)` }}
+          className="inline-block"
+          style={{ transform: `translateY(${paw.offsetY * scale}px) rotate(${paw.rotate}deg)` }}
         >
           <span
             className="paw-trail-item block"
@@ -22,7 +34,7 @@ export default function CatPawTrail() {
               animationDelay: paw.delay,
             }}
           >
-            <PawPrint width={paw.size} height={paw.size} />
+            <PawPrint width={paw.size * scale} height={paw.size * scale} />
           </span>
         </span>
       ))}

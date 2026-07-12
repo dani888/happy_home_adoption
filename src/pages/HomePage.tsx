@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
 import PetCard from "../components/PetCard";
+import CatPawTrail from "../components/CatPawTrail";
 import { getPetsByCategory, pets } from "../data/pets";
 
 export default function HomePage() {
@@ -10,7 +11,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-gradient-to-b from-amber-50 to-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:py-28">
+        <div className="mx-auto max-w-6xl px-6 pt-20 pb-10 text-center sm:pt-28 sm:pb-12">
           <p className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1 text-sm font-medium text-amber-800">
             {pets.length} animals currently looking for homes
           </p>
@@ -28,21 +29,22 @@ export default function HomePage() {
           <div className="mt-8 flex justify-center gap-4">
             <Link
               to="/dogs"
-              className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-amber-500/25 outline-none transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-lg hover:shadow-amber-500/30 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:translate-y-0"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-amber-400 to-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-amber-500/30 ring-1 ring-inset ring-white/25 outline-none transition-all duration-200 hover:-translate-y-0.5 hover:to-amber-600 hover:shadow-lg hover:shadow-amber-500/40 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:translate-y-0 active:shadow-sm"
             >
               Meet the Dogs
             </Link>
             <Link
               to="/cats"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm outline-none transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2 active:translate-y-0"
+              className="inline-flex items-center justify-center rounded-full border-2 border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm outline-none transition-all duration-200 hover:-translate-y-0.5 hover:border-amber-300 hover:bg-amber-50/60 hover:text-amber-700 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2 active:translate-y-0"
             >
               Meet the Cats
             </Link>
           </div>
+          <CatPawTrail scale={3} color="text-amber-300" className="mt-10 items-end justify-center" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 pt-10 pb-16">
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="text-2xl font-bold text-slate-900">
@@ -119,7 +121,7 @@ export default function HomePage() {
             </p>
             <button
               type="button"
-              className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-amber-500/25 outline-none transition-all duration-200 hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-lg hover:shadow-amber-500/30 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:translate-y-0"
+              className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-b from-amber-400 to-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-amber-500/30 ring-1 ring-inset ring-white/25 outline-none transition-all duration-200 hover:-translate-y-0.5 hover:to-amber-600 hover:shadow-lg hover:shadow-amber-500/40 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:translate-y-0 active:shadow-sm"
             >
               <Heart className="h-4 w-4" strokeWidth={2.25} fill="currentColor" />
               Donate

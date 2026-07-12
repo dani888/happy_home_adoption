@@ -19,7 +19,7 @@ export default function PetImageCarousel({
     if (images.length <= 1 || isPaused) return;
     const id = setInterval(() => {
       setIndex((current) => (current + 1) % images.length);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(id);
   }, [images.length, isPaused, index]);
 
