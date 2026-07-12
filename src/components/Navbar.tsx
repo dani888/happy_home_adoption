@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Cat, Dog, Heart, Home, Info, Menu, PawPrint, X } from "lucide-react";
 import CatPawTrail from "./CatPawTrail";
@@ -30,13 +30,28 @@ const donateClasses =
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handlePointerDown = (event: PointerEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [isMenuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
+    <header
+      ref={headerRef}
+      className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <div className="flex items-center gap-3">
           <NavLink to="/" className="flex items-center gap-2.5">
