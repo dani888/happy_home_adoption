@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Heart } from "lucide-react";
+import { ExternalLink, Heart, Newspaper } from "lucide-react";
 import PetCard from "../components/PetCard";
 import CatPawTrail from "../components/CatPawTrail";
+import { BLOG_URL } from "../components/Navbar";
 import { getPetsByCategory, pets } from "../data/pets";
 
 export default function HomePage() {
@@ -96,6 +97,34 @@ export default function HomePage() {
           {featuredCats.map((pet) => (
             <PetCard key={pet.id} pet={pet} />
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="flex flex-col items-center gap-8 rounded-3xl border border-slate-200 bg-gradient-to-br from-amber-50 to-white p-8 text-center shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-12 sm:text-left">
+          <div>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800">
+              <Newspaper className="h-3.5 w-3.5" strokeWidth={2.25} />
+              Our Blog
+            </span>
+            <h2 className="mt-4 text-2xl font-bold text-slate-900 sm:text-3xl">
+              Stories and advice for dog and cat lovers
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-slate-600 sm:mx-0">
+              Read articles on pet care, training, and rescue stories, and
+              join the conversation by sharing your own thoughts in the
+              comments.
+            </p>
+          </div>
+          <a
+            href={BLOG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-b from-amber-400 to-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-amber-500/30 ring-1 ring-inset ring-white/25 outline-none transition-all duration-200 hover:-translate-y-0.5 hover:to-amber-600 hover:shadow-lg hover:shadow-amber-500/40 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:translate-y-0 active:shadow-sm"
+          >
+            Visit the Blog
+            <ExternalLink className="h-4 w-4" strokeWidth={2.25} />
+          </a>
         </div>
       </section>
 

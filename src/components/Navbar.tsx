@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Cat, Dog, Heart, Home, Info, Menu, PawPrint, X } from "lucide-react";
+import { Cat, Dog, Heart, Home, Info, Menu, Newspaper, PawPrint, X } from "lucide-react";
 import CatPawTrail from "./CatPawTrail";
+
+export const BLOG_URL = "https://dog-blog8.netlify.app/";
 
 const navItems = [
   { to: "/", label: "Home", end: true, icon: Home },
@@ -9,6 +11,12 @@ const navItems = [
   { to: "/cats", label: "Cats", end: false, icon: Cat },
   { to: "/about", label: "About", end: false, icon: Info },
 ];
+
+const externalLinkClasses =
+  "flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold text-slate-600 outline-none transition-all duration-200 hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-amber-400";
+
+const mobileExternalLinkClasses =
+  "flex items-center gap-3 rounded-r-lg border-l-4 border-transparent px-3.5 py-3 text-base font-semibold text-slate-700 outline-none transition-colors hover:bg-slate-50 hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-amber-400";
 
 const linkClasses = ({ isActive }: { isActive: boolean }) =>
   `flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold outline-none transition-all duration-200 focus-visible:ring-2 focus-visible:ring-amber-400 ${
@@ -73,6 +81,15 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
+            <a
+              href={BLOG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={externalLinkClasses}
+            >
+              <Newspaper className="h-4 w-4" strokeWidth={2.25} />
+              Blog
+            </a>
           </nav>
           <span className="h-6 w-px bg-slate-200" aria-hidden="true" />
           <button type="button" className={donateClasses}>
@@ -108,6 +125,15 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
+          <a
+            href={BLOG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={mobileExternalLinkClasses}
+          >
+            <Newspaper className="h-5 w-5" strokeWidth={2.25} />
+            Blog
+          </a>
           <button
             type="button"
             className="mt-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-amber-400 to-amber-500 px-4 py-3 text-base font-semibold text-white shadow-md shadow-amber-500/30 ring-1 ring-inset ring-white/25 outline-none transition-all duration-200 hover:to-amber-600 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-amber-400 active:shadow-sm"
