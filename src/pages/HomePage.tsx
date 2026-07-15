@@ -21,7 +21,7 @@ export default function HomePage() {
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
             Meet your new
-            <span className="text-amber-500"> best friend</span>
+            <span className="text-amber-500"> Best Friend</span>
           </h1>
           <p className="mt-2 text-xl font-semibold text-amber-600 sm:text-2xl">
             Adopt today!

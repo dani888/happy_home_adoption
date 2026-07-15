@@ -22,6 +22,12 @@ export const pets: Pet[] = [
       "Golden Retrievers were originally bred in Scotland in the mid-1800s as gundogs, prized for their soft mouths that could retrieve waterfowl without damaging them. Today they're one of the most popular family breeds thanks to their patience, intelligence, and eagerness to please.",
     favoriteFood:
       "Peanut butter-stuffed Kongs — and anything he can sneak off the counter.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "Full health check completed; no ongoing conditions.",
+    },
     temperament: ["Friendly", "Gentle", "Playful", "Eager to please"],
     goodWith: ["Kids", "Other dogs", "Cats"],
   },
@@ -50,6 +56,12 @@ export const pets: Pet[] = [
       "Border Collies hail from the England-Scotland border region, bred for centuries to herd sheep across rugged terrain. They're widely considered the most intelligent dog breed, which means they need consistent mental and physical stimulation to stay happy.",
     favoriteFood:
       "Freeze-dried chicken training treats — the higher-value, the better.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "Full health check completed; no ongoing conditions.",
+    },
     temperament: ["Intelligent", "Energetic", "Alert", "Loyal"],
     goodWith: ["Active families", "Older kids", "Other dogs"],
   },
@@ -77,6 +89,13 @@ export const pets: Pet[] = [
     breedInfo:
       "French Bulldogs were developed in the 1800s from English Bulldog stock brought to France by lace workers, later becoming a favorite of Parisian society. Their bat-like ears and compact build have made them one of the most popular companion breeds worldwide.",
     favoriteFood: "Pumpkin-topped kibble and the occasional slice of banana.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes:
+        "Monitored for typical brachycephalic breathing sensitivity; currently doing well.",
+    },
     temperament: ["Calm", "Affectionate", "Comedic", "Low-energy"],
     goodWith: ["Apartments", "First-time owners", "Seniors"],
   },
@@ -101,6 +120,12 @@ export const pets: Pet[] = [
       "Beagles were bred in England as scent hounds for tracking hare, and their keen sense of smell is second only to a few other breeds. They're known for their friendly howl-like bay and their determination to follow an interesting scent wherever it leads.",
     favoriteFood:
       "Anything, honestly — but she'll do backflips for a bit of cheese.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions; completed her full puppy vaccine series.",
+    },
     temperament: ["Curious", "Merry", "Determined", "Social"],
     goodWith: ["Kids", "Other dogs", "Active households"],
   },
@@ -128,6 +153,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Domestic Shorthairs aren't a single breed but a broad category of cats with mixed ancestry, prized for hardiness and varied coat patterns. They tend to be adaptable, healthy, and make wonderful companions across a wide range of personalities.",
     favoriteFood: "Flaked tuna, with a few crunchy kibble bits to finish.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "Had a dental cleaning after intake; no ongoing conditions.",
+    },
     temperament: ["Easygoing", "Affectionate", "Independent", "Curious"],
     goodWith: ["Quiet homes", "Other cats", "Calm households"],
   },
@@ -155,6 +186,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Ragdolls were developed in California in the 1960s and are famous for going limp and relaxed when held, giving the breed its name. They're large, gentle cats with striking blue eyes and a semi-long coat that's surprisingly easy to groom.",
     favoriteFood: "Chicken pate, and the occasional lick of whipped cream.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Docile", "Affectionate", "Social", "Gentle"],
     goodWith: ["Kids", "Other pets", "First-time owners"],
   },
@@ -178,6 +215,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Domestic Longhairs share the same varied ancestry as their shorthaired cousins but carry the recessive long-hair gene. Their plush coats need a bit more brushing, but they're every bit as adaptable and affectionate as any other mixed-breed cat.",
     favoriteFood: "Salmon pate, served at room temperature.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "Mild arthritis in his hind legs, managed with a joint supplement.",
+    },
     temperament: ["Calm", "Dignified", "Affectionate", "Quiet"],
     goodWith: ["Seniors", "Quiet homes", "Single-pet households"],
   },
@@ -205,6 +248,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Bengal cats were developed by crossing domestic cats with Asian leopard cats, resulting in a wild-looking spotted coat and an athletic, playful temperament. Mixes like Pixel often retain the striking looks with a slightly calmer, more adaptable personality.",
     favoriteFood: "High-protein wet food — feathers optional, chicken required.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions; full of energy.",
+    },
     temperament: ["Energetic", "Playful", "Athletic", "Bold"],
     goodWith: ["Active households", "Other playful cats", "Experienced owners"],
   },
@@ -232,6 +281,12 @@ export const pets: Pet[] = [
       "Labrador Retrievers originated in Newfoundland, Canada, where they helped fishermen haul nets and retrieve catch from icy water. Their water-resistant coat and otter-like tail make them natural swimmers, and they've topped popularity rankings for decades thanks to their friendly, trainable nature.",
     favoriteFood:
       "Anything that resembles a treat, especially post-swim ice cubes.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "Hips X-rayed clear; no ongoing conditions.",
+    },
     temperament: ["Friendly", "Outgoing", "Active", "Trainable"],
     goodWith: ["Kids", "Other dogs", "Active families"],
   },
@@ -259,6 +314,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Siberian Huskies were bred by the Chukchi people of northeastern Asia to pull sleds across vast frozen distances with minimal food. Their endurance, thick double coat, and independent streak make them incredible athletes, though they need consistent exercise and secure containment.",
     favoriteFood: "Raw-ish, high-protein diets — she'll howl if dinner's late.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Vocal", "Independent", "Energetic", "Mischievous"],
     goodWith: ["Experienced owners", "Cold climates", "Active households"],
   },
@@ -283,6 +344,13 @@ export const pets: Pet[] = [
       "Dachshunds were bred in Germany to hunt badgers, using their long low bodies to chase prey into underground burrows. Despite their small size, they're known for a bold, tenacious personality and a surprisingly loud bark for their stature.",
     favoriteFood:
       "Small, frequent meals — and she'll beg dramatically for cheese.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes:
+        "Monitored for early back sensitivity common to the breed; currently no issues.",
+    },
     temperament: ["Bold", "Loyal", "Alert", "Stubborn"],
     goodWith: ["Apartments", "Single-pet households", "Older kids"],
   },
@@ -307,6 +375,12 @@ export const pets: Pet[] = [
       "German Shepherds were developed in the late 1800s for herding and quickly proved themselves as versatile working dogs in police, military, and service roles. Their intelligence and trainability make them exceptional partners, provided their need for mental stimulation is met.",
     favoriteFood:
       "High-protein kibble with a scoop of cottage cheese as a reward.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "Hip screening came back clear; no ongoing conditions.",
+    },
     temperament: ["Loyal", "Intelligent", "Confident", "Protective"],
     goodWith: ["Experienced owners", "Older kids", "Training-minded families"],
   },
@@ -335,6 +409,12 @@ export const pets: Pet[] = [
       "Standard Poodles were originally bred in Germany as water retrievers, and their signature clip was designed to protect joints and organs while swimming. They consistently rank among the most intelligent breeds and are a popular choice for allergy-sensitive households.",
     favoriteFood:
       "Grain-free kibble with a sprinkle of parmesan for training sessions.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions; coat and skin in excellent shape.",
+    },
     temperament: ["Intelligent", "Elegant", "Trainable", "Sociable"],
     goodWith: ["Kids", "Other dogs", "Allergy-sensitive homes"],
   },
@@ -358,6 +438,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Boxers were developed in Germany in the late 1800s from bulldog-type ancestors and were originally used for hunting large game and later as guard and working dogs. Their playful, high-energy nature paired with deep loyalty makes them beloved family companions.",
     favoriteFood: "Anything crunchy — carrots and apple slices are her go-to.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions; still growing into her energy.",
+    },
     temperament: ["Playful", "Energetic", "Loyal", "Goofy"],
     goodWith: ["Kids", "Active families", "Other dogs with introductions"],
   },
@@ -385,6 +471,13 @@ export const pets: Pet[] = [
     breedInfo:
       "Persians are one of the oldest known cat breeds, prized since the 1600s for their luxurious long coat and sweet, mellow temperament. Their flat faces and dense fur mean they need regular grooming and cool environments, but they reward the effort with calm companionship.",
     favoriteFood: "Delicate bites of chicken breast, served in a shallow dish.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes:
+        "Mild tear-duct sensitivity common to the breed, managed with regular cleaning.",
+    },
     temperament: ["Calm", "Sweet", "Gentle", "Reserved"],
     goodWith: ["Quiet homes", "Seniors", "Single-pet households"],
   },
@@ -408,6 +501,13 @@ export const pets: Pet[] = [
     breedInfo:
       "Maine Coons are one of the largest domestic cat breeds and a native New England breed, thought to have developed for survival in harsh winters thanks to their shaggy, water-resistant coat. They're famously friendly and often described as having dog-like loyalty.",
     favoriteFood: "Big portions to match his big body — turkey is his favorite.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes:
+        "Heart screened clear, a common precaution for the breed; no ongoing conditions.",
+    },
     temperament: ["Sociable", "Gentle", "Playful", "Loyal"],
     goodWith: ["Kids", "Other pets", "Families"],
   },
@@ -436,6 +536,12 @@ export const pets: Pet[] = [
       "Siamese cats trace their origins to ancient Siam (modern-day Thailand), where they were treasured companions to royalty. They're known for their striking blue eyes, sleek coat, and famously vocal, people-oriented personalities.",
     favoriteFood:
       "Fish-based wet food, and she'll tell you exactly when it's time.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Vocal", "Social", "Intelligent", "Affectionate"],
     goodWith: ["Attentive owners", "Other cats", "Families"],
   },
@@ -459,6 +565,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Orange tabbies aren't a distinct breed but a coat-color pattern found across many breeds, caused by a sex-linked gene that appears far more often in males. They've earned a reputation, backed by many owners, for being especially food-driven and easygoing.",
     favoriteFood: "Literally anything — he's famous for his food motivation.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Affectionate", "Food-motivated", "Easygoing", "Playful"],
     goodWith: ["Kids", "First-time owners", "Other pets"],
   },
@@ -482,6 +594,13 @@ export const pets: Pet[] = [
     breedInfo:
       "British Shorthairs are one of the oldest English cat breeds, descended from cats brought to Britain by the Romans. Their dense coat, round face, and easygoing temperament have made them a enduringly popular, low-fuss companion breed.",
     favoriteFood: "Pate-style wet food, enjoyed slowly and deliberately.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes:
+        "On a weight-management diet recommended by our vet; otherwise healthy.",
+    },
     temperament: ["Independent", "Easygoing", "Affectionate", "Calm"],
     goodWith: ["Quiet homes", "Seniors", "First-time owners"],
   },
@@ -505,6 +624,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Calico refers to a tri-color coat pattern rather than a breed, and it's almost exclusively found in female cats due to the genetics behind the coloring. Many cultures consider calicos good luck, and their personalities are as varied and vivid as their coats.",
     favoriteFood: "Chicken and gravy — she's particular about texture.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Spirited", "Selective", "Affectionate", "Independent"],
     goodWith: ["Calm households", "Single-pet homes", "Patient owners"],
   },
@@ -528,6 +653,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Great Danes were bred in Germany to hunt wild boar, valued for their size, speed, and courage, before becoming beloved companions prized for their gentle, affectionate nature. Despite their imposing stature, they're famously sweet and often unaware of just how big they are.",
     favoriteFood: "Large-breed kibble, plus the occasional ice cube treat.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "On a joint supplement as a precaution for his size; otherwise healthy.",
+    },
     temperament: ["Gentle", "Affectionate", "Calm", "Devoted"],
     goodWith: ["Families with space", "Other dogs", "Experienced owners"],
   },
@@ -556,6 +687,12 @@ export const pets: Pet[] = [
       "Despite the name, Australian Shepherds were actually developed in the United States to herd livestock, prized for their intelligence, stamina, and striking merle coats. They excel in dog sports and need an active home that can match their drive.",
     favoriteFood:
       "High-energy kibble and training treats she'll work hard for.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions; stays limber with regular exercise.",
+    },
     temperament: ["Intelligent", "Energetic", "Loyal", "Eager to work"],
     goodWith: ["Active families", "Older kids", "Experienced owners"],
   },
@@ -579,6 +716,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Tuxedo refers to the black-and-white bicolor pattern rather than a breed, caused by a piebald gene that limits pigment distribution. Cats with this pattern have a long history as ship and farm cats thanks to their hardy, adaptable nature.",
     favoriteFood: "Turkey pate, inspected thoroughly before eating.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Curious", "Confident", "Affectionate", "Playful"],
     goodWith: ["Families", "Other cats", "First-time owners"],
   },
@@ -602,6 +745,12 @@ export const pets: Pet[] = [
     breedInfo:
       "Brown tabby is one of the most common coat patterns in domestic cats, caused by the agouti gene creating a striped, marbled, or spotted look. Tabbies come from a huge range of genetic backgrounds and are known for their varied, often extroverted personalities.",
     favoriteFood: "Crunchy kibble, followed immediately by a nap.",
+    medicalHistory: {
+      vaccinated: true,
+      spayedNeutered: true,
+      microchipped: true,
+      notes: "No ongoing conditions.",
+    },
     temperament: ["Playful", "Energetic", "Social", "Curious"],
     goodWith: ["Kids", "Other cats", "Active households"],
   },

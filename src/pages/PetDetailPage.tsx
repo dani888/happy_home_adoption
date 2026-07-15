@@ -1,5 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
-import { Utensils } from "lucide-react";
+import { CheckCircle2, Stethoscope, Utensils, XCircle } from "lucide-react";
 import { getPetById } from "../data/pets";
 import PetImageCarousel from "../components/PetImageCarousel";
 import MapEmbed from "../components/MapEmbed";
@@ -115,6 +115,40 @@ export default function PetDetailPage() {
             {pet.breedInfo}
           </p>
         </div>
+      </div>
+
+      <div className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-slate-500">
+          <Stethoscope className="h-4 w-4" strokeWidth={2.25} />
+          Medical History
+        </h2>
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {[
+            { label: "Vaccinated", value: pet.medicalHistory.vaccinated },
+            {
+              label: "Spayed/Neutered",
+              value: pet.medicalHistory.spayedNeutered,
+            },
+            { label: "Microchipped", value: pet.medicalHistory.microchipped },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="flex items-center gap-2 rounded-xl bg-slate-50 px-3 py-2.5"
+            >
+              {item.value ? (
+                <CheckCircle2 className="h-4 w-4 shrink-0 text-green-600" />
+              ) : (
+                <XCircle className="h-4 w-4 shrink-0 text-slate-400" />
+              )}
+              <span className="text-sm font-medium text-slate-700">
+                {item.label}
+              </span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-sm text-slate-600">
+          {pet.medicalHistory.notes}
+        </p>
       </div>
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">

@@ -19,4 +19,10 @@ export interface Pet {
   favoriteFood: string;
   temperament: string[];
   goodWith: string[];
+  medicalHistory: {
+    vaccinated: boolean;
+    spayedNeutered: boolean;
+    microchipped: boolean;
+    notes: string;
+  };
 }
