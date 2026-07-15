@@ -1,6 +1,8 @@
 import { Link, Navigate, useParams } from "react-router-dom";
+import { Utensils } from "lucide-react";
 import { getPetById } from "../data/pets";
 import PetImageCarousel from "../components/PetImageCarousel";
+import MapEmbed from "../components/MapEmbed";
 
 export default function PetDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -68,18 +70,14 @@ export default function PetDetailPage() {
               Where {pet.name} came from
             </h2>
             <p className="mt-1 text-slate-700">{pet.origin}</p>
-            <div className="mt-3 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
-              <iframe
-                title={`Map of ${pet.location}`}
-                src={`https://www.google.com/maps?q=${pet.lat},${pet.lng}&z=11&output=embed`}
-                width="100%"
-                height="220"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                style={{ border: 0 }}
-                className="block"
-              />
-            </div>
+            <MapEmbed
+              lat={pet.lat}
+              lng={pet.lng}
+              location={pet.location}
+              zoom={11}
+              minHeight={220}
+              className="mt-3 rounded-xl border border-slate-200 shadow-sm"
+            />
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2">
@@ -93,12 +91,12 @@ export default function PetDetailPage() {
             ))}
           </div>
 
-          <button
-            type="button"
+          <Link
+            to={`/pet/${pet.id}/adopt`}
             className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-amber-400 to-amber-500 px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-amber-500/30 ring-1 ring-inset ring-white/25 outline-none transition-all duration-200 hover:-translate-y-0.5 hover:to-amber-600 hover:shadow-lg hover:shadow-amber-500/40 focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:translate-y-0 active:shadow-sm sm:w-auto"
           >
             Start {pet.name}'s Adoption Process
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -119,19 +117,31 @@ export default function PetDetailPage() {
         </div>
       </div>
 
-      <div className="mt-10 rounded-2xl bg-amber-50 p-6">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-amber-800">
-          Good with
-        </h2>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {pet.goodWith.map((item) => (
-            <span
-              key={item}
-              className="rounded-full bg-white px-3 py-1 text-sm font-medium text-amber-700 shadow-sm"
-            >
-              {item}
-            </span>
-          ))}
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="rounded-2xl bg-amber-50 p-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-amber-800">
+            Good with
+          </h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {pet.goodWith.map((item) => (
+              <span
+                key={item}
+                className="rounded-full bg-white px-3 py-1 text-sm font-medium text-amber-700 shadow-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl bg-amber-50 p-6">
+          <h2 className="flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-amber-800">
+            <Utensils className="h-4 w-4" strokeWidth={2.25} />
+            Favorite Food
+          </h2>
+          <p className="mt-3 text-sm font-medium text-slate-700">
+            {pet.favoriteFood}
+          </p>
         </div>
       </div>
     </div>

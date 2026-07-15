@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Heart, Newspaper } from "lucide-react";
 import PetCard from "../components/PetCard";
 import CatPawTrail from "../components/CatPawTrail";
+import PetMatchQuiz from "../components/PetMatchQuiz";
 import { BLOG_URL } from "../components/Navbar";
 import { getPetsByCategory, pets } from "../data/pets";
 
@@ -11,13 +12,15 @@ export default function HomePage() {
 
   return (
     <div>
+      <PetMatchQuiz />
+
       <section className="relative overflow-hidden bg-gradient-to-b from-amber-50 to-white">
         <div className="mx-auto w-full max-w-6xl px-6 pt-14 pb-4 text-center sm:pt-28 sm:pb-12">
           <p className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1 text-sm font-medium text-amber-800">
             {pets.length} animals currently looking for homes
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
-            Find your new
+            Meet your new
             <span className="text-amber-500"> best friend</span>
           </h1>
           <p className="mt-2 text-xl font-semibold text-amber-600 sm:text-2xl">

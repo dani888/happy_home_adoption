@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import DogsPage from "./pages/DogsPage";
 import CatsPage from "./pages/CatsPage";
 import PetDetailPage from "./pages/PetDetailPage";
+import AdoptionFormPage from "./pages/AdoptionFormPage";
 import AboutPage from "./pages/AboutPage";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/dogs" element={<DogsPage />} />
         <Route path="/cats" element={<CatsPage />} />
         <Route path="/pet/:id" element={<PetDetailPage />} />
+        <Route path="/pet/:id/adopt" element={<AdoptionFormPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Layout>

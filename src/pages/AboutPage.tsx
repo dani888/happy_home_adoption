@@ -1,4 +1,4 @@
-import { Code2, MapPinned, Palette, Route, Shapes, Sparkles } from "lucide-react";
+import { Code2, Heart, MapPinned, Palette, Route, Shapes, Sparkles } from "lucide-react";
 
 const stack = [
   {
@@ -70,6 +70,28 @@ export default function AboutPage() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="mt-14 text-center">
+        <h2 className="text-center text-sm font-semibold uppercase tracking-wide text-amber-600">
+          Best Friends
+        </h2>
+        <p className="mx-auto mt-2 max-w-xl text-slate-600">
+          Dogs and cats can be the very best of friends.
+        </p>
+        <div className="mx-auto mt-6 max-w-xs rounded-3xl border border-slate-200 bg-gradient-to-br from-amber-50 to-white p-4 shadow-sm">
+          <div className="aspect-square overflow-hidden rounded-2xl bg-slate-100 shadow-md">
+            <img
+              src="https://media.tenor.com/Yz6eoswV6-sAAAAd/dog-cat.gif"
+              alt="A dog and a cat sitting happily together in a living room"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <span className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">
+            <Heart className="h-3.5 w-3.5" strokeWidth={2.25} fill="currentColor" />
+            Happier together
+          </span>
         </div>
       </div>
     </div>

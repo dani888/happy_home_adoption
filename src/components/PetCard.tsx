@@ -18,9 +18,14 @@ export default function PetCard({ pet }: { pet: Pet }) {
       <div className="flex flex-1 flex-col gap-2 p-5">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-slate-900">{pet.name}</h3>
-          <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-700">
-            {pet.age}
-          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-700">
+              {pet.age}
+            </span>
+            <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-700">
+              {pet.gender}
+            </span>
+          </div>
         </div>
         <p className="text-sm font-medium text-slate-500">{pet.breed}</p>
         <p className="line-clamp-2 text-sm text-slate-600">

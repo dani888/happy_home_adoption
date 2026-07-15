@@ -16,6 +16,7 @@ export interface Pet {
   shortDescription: string;
   story: string;
   breedInfo: string;
+  favoriteFood: string;
   temperament: string[];
   goodWith: string[];
 }
