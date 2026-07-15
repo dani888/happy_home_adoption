@@ -34,12 +34,10 @@ export default function MapEmbed({
       <iframe
         title={`Map of ${location}`}
         src={`https://www.google.com/maps?q=${lat},${lng}&z=${zoom}&output=embed`}
-        width="100%"
-        height="100%"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         style={{ border: 0 }}
-        className="block h-full w-full"
+        className="absolute inset-0 h-full w-full"
         onLoad={() => setTimeout(() => setIsLoaded(true), 600)}
       />
     </div>
